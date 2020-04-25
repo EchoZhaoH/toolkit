@@ -4,7 +4,10 @@ import path from 'path'
 const resolve = p => path.resolve(__dirname, p)
 
 const tsPlugin = ts({
-  tsconfig: resolve('tsconfig.json')
+  tsconfig: resolve('tsconfig.json'),
+  tsconfigOverride: {
+    exclude: ['**/__tests__']
+  }
 })
 
 const defaultFormat = ['esm-bundler', 'cjs']

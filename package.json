@@ -1,14 +1,26 @@
 {
-  "name": "toolkit",
-  "version": "1.0.0",
-  "main": "src/index.ts",
+  "name": "@echozh/toolkits",
+  "version": "3.0.0",
+  "main": "index.js",
   "author": "echozh",
   "license": "MIT",
-  "private": true,
   "types": "dist/index.d.ts",
+  "module": "dist/esm-bundler.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EchoZw/toolkit"
+  },
   "scripts": {
     "build": "node build/build.js",
-    "test": "node build/build.js && jest"
+    "test": "node build/build.js && jest",
+    "release": "node build/release.js"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.7.13",
